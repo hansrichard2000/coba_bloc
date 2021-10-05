@@ -2,6 +2,7 @@ import 'package:coba_bloc/blocs/blocs.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'bloc/rajaongkir_bloc.dart';
 import 'views/pages/pages.dart';
 
 void main() {
@@ -16,8 +17,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "Flutter Demo",
       home: BlocProvider(
-        child: HomePage(),
-        create: (context) => ColorBloc(),
+        create: (context) => RajaongkirBloc(),
+        child: const OngkirPage(),
       ),
     );
   }
